@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dancing+Script:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  background-color: #0c2835;
+  color: white;
+  font-family: "Akaya Telivigala", cursive;
+}
+
+.calculator-grid>button:hover {
+  background-color: #191919;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 15px 15px 0 0;
+}
+
+.output .previous-number {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.output .current-number {
+  color: black;
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.equal {
+  background-color: rgb(36, 139, 114) !important;
+}
+
+.equal:hover {
+  background-color: teal !important;
+}
+
+.delete {
+  background-color: rgb(211, 93, 24) !important;
+}
+
+.delete:hover {
+  background-color: rgb(255, 166, 0) !important;
+}
+
+.clear {
+  background-color: rgb(235, 60, 60) !important;
+}
+
+.clear:hover {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+
+@media screen and (max-width:768px) {
+  .calculator-grid {
+    margin: auto 3%;
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+
+
+@media screen and (max-width:512px) {
+  .calculator-grid {
+    margin: auto 3%;
+    grid-template-columns: repeat(4, 82px);
+  }
+}
